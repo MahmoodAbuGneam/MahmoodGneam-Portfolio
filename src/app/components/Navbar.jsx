@@ -30,7 +30,7 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-2xl text-white font-semibold"
         >
-          Mahmood's Portfolio
+          Mahmood&apos;s Portfolio
         </Link>
         <div className="MachineLearning-menu block md:hidden">
           {!navbarOpen ? (

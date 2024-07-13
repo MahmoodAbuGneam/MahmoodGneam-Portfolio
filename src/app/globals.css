@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 10, 132, 255; /* blue-600 */
+  --background-start-rgb: 187, 247, 208; /* green-200 */
+  --background-end-rgb: 10, 132, 255; /* blue-600 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 10, 132, 255; /* blue-600 */
+    --background-end-rgb: 187, 247, 208; /* green-200 */
+  }
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+
+.about-image {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.about-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(10, 132, 255, 0.7), rgba(187, 247, 208, 0.7)); /* Increased opacity */
+  mix-blend-mode: multiply;
+}
